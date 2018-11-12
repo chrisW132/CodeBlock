@@ -1,0 +1,344 @@
+
+h2.section-heading{
+  padding-bottom: 25px;
+}
+.nav-tabs {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom-color: transparent;
+      background-color: #999999;
+  }
+  .codingSec .nav-tabs, .codingSec .tab-content {
+      display: table-cell;
+      margin: 0;
+      vertical-align: top;
+      background: #000;
+  }
+  .codingSec .nav-tabs > li {
+      float: none;
+  }
+
+  .codingSec .tab-content {
+      left: 0px;
+      z-index: 1;
+  }
+
+  .codingSec .nav-tabs, .codingSec .tab-content {
+      display: block;
+      margin: 0;
+      vertical-align: top;
+  }
+
+  .codingSec .nav-tabs{
+    background: #000;
+    overflow-y: auto;
+    padding-right: 0px;
+  }
+  .codingSec .navContain{
+    background: #000;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .codingSec .navContain hr{
+    margin-top: 10px;
+    margin-bottom: 10px
+    border-top: 1px solid #777;
+    width: 90%;
+  }
+
+  .codingSec .navContain a {
+      padding: 15px 15px;
+      padding-left: 30px;
+      margin-right: 0px;
+      clear: both;
+      padding-top: 6px;
+      display: block;
+      color: rgba(255,255,255,.5);
+  }
+  .codingSec .navContain a:hover,
+  .codingSec .navContain a:focus{
+    color: #18BC9C;
+  }
+  .codingSec .nav-tabs>li.active>a,
+    .codingSec .nav-tabs>li.active>a:focus,
+    .codingSec .nav-tabs>li.active>a:hover,
+    .codingSec .nav-tabs>li>a:hover{
+      background: #0f192a;
+      color: #fff;
+      cursor: default;
+      border-bottom-color: transparent;
+      border: none;
+    }
+  .codingSec .nav-tabs>li>a{
+    border-radius: 0px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 15px 15px;
+    padding-left: 30px;
+    margin-right: 0px;
+
+  }
+  .ghostBTN{
+    margin-right: 10PX;
+    padding: 2px 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .ghostBTN:hover, .ghostBTN:focus{
+    border: 1px solid #00ADDF;;
+    color: #00ADDF;;
+    background: #070C15;
+  }
+
+  .codeAction{
+    margin-right: 10PX;
+    padding: 3px 0px;
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    }
+
+    .get{
+      background: #1E5A20;
+    }
+    .delete{
+      background: #822A2A;
+    }
+    .post{
+      background: #3A7182;
+    }
+
+    .active .get, .navActiveTxt .get{
+      background: #059E08;
+      color: #2C3E50;
+    }
+    .active .delete, .navActiveTxt .delete{
+      background: #980404;
+      color: #18BC9C;
+    }
+    .active .post, .navActiveTxt .post{
+      background: #00ADDF;
+      color: #2C3E50;
+    }
+
+    .navActiveTxt a.codeblklnk{
+      color:#fff;
+      padding-left: 0px;
+    }
+    .navActiveTxt{
+      display: none;
+      color: #fff;
+      background: #0f192a;
+      padding: 10px;
+    }
+
+  .codingSec{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .syntaxhighlighter .toolbar{
+    display: none;
+  }
+  .tabContainer{
+    display: flex;
+    background: #212225;
+    width: 100%;
+  }
+  .lftBox{
+    padding: 0px;
+  }
+  .blockCont{
+    margin-right:0px;
+    margin-left: 0px;
+  }
+  .codingSec .nav-tabs,
+  .codingSec .tab-content{
+    background: #212225;
+  }
+
+  .codingSec h4{
+    margin-left: -15px;
+    padding-left: 15px;
+    margin-right: -15px;
+    padding-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #212225;
+    color:#fff;
+  }
+  .codingSec .navContain h4{
+    margin-left: 0px;
+    margin-right:0px;
+  }
+  .codingSec .navContain{
+    background: #212225;
+  }
+
+  .sampleDATA{
+    background: #0f192a;
+    float: left;
+  }
+
+  .syntaxhighlighter{
+    height: 275px;
+    overflow: auto!important;
+  }
+
+ /* #sampleResults{
+
+  }*/
+  .returnCODE{
+  	display: none;
+    height: 345px;
+    overflow: auto;
+  }
+
+  .sampleResults,
+  .returnCODE,
+  .returnCODE .syntaxhighlighter,
+  .returnCODE .syntaxhighlighter table,
+  .returnCODE .syntaxhighlighter .line.alt2{
+    background: #070C15!important;
+    float:left;
+  }
+
+.lodingBlock{
+  text-align: center;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  display: none;
+}
+
+.codingSec .part2{
+  padding-top: 30px;
+  clear: both;
+}
+.codingSec .docSection h4{
+  background: none;
+  text-align: left;
+  font-family: 'CiscoSansRegular', sans-serif;
+}
+
+.codingSec .docSection p{
+  text-align: left;
+}
+
+.codingSec .veiwAll{
+  margin-top: 30px;
+}
+.codingSec .viewDocs{
+  display: none;
+}
+ .codingSec .navbar-header .navbar-toggle{
+   background: none;
+   border-radius: 5px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-top: .6rem;
+}
+.codingSec .navbar-header{
+  display: none;
+}
+.codingSec .navbar-header .navbar-toggle i{
+  color: #fff;
+}
+.Mobile{
+  display: none;
+}
+/*.navContain.col-sm-12, .navContain.col-xs-12{
+  border-bottom: 5px solid #fff;
+}*/
+@media (max-width: 991px){
+  .codingSec .navbar-header{
+    display:block;
+  }
+  .codingSec .navbar-toggle {
+      display: block;
+      float:left;
+      margin-right: 4px;
+  }
+
+  .codingSec .navbar-toggle .icon-bar{
+    color: #fff;
+    background-color: #fff;
+  }
+  .tabContainer{
+    display: block;
+  }
+  .navActiveTxt{
+    display: block;
+  }
+}
+@media (max-width: 767px){
+
+    .codingSec .navContain h4{
+      display: none;
+    }
+    .codingSec .readAll{
+      display: none!important;
+    }
+
+    .codingSec .part2{
+      display: none;
+    }
+    .codingSec .docSection{
+      display: none;
+    }
+    .codingSec .veiwAll{
+      display: none;
+    }
+    .Desk{
+      display: none;
+    }
+    .Mobile{
+      display:block;
+      }
+
+    .codingSec .viewDocs .featuredBox a.veiwAll{
+      display: block;
+      padding: 10px 10px;
+      margin-top: 30px;
+      width: 100%;
+      clear: both;
+    }
+
+    .blue{
+      border: 1px solid #00ADDF;
+      color: #00ADDF;
+    }
+
+    .codingSec .ghostBTN:hover, .codingSec .ghostBTN:focus{
+      background:#00ADDF
+      border-color:#fff;
+      color: #fff;
+    }
+    .featured-header{
+      text-align: left;
+    }
+
+    #navBlock{
+      height: 275px!important;
+    }
+
+    .myNav{
+      height: 378px!important;
+    }
+
+    .tabContainer{
+      display: block;
+    }
+
+
+}

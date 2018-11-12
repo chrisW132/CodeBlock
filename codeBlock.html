@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CWilloughby-Portfolio-YouTube Player</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="font-awesome/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="js/syntax/shCore.css" rel="stylesheet" media="screen">
+    <link href="js/syntax/shThemeMidnight.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="codeBlock.css" rel="stylesheet">
+<script src="https://apis.google.com/js/api.js"></script>
+  </head>
+  <body id="page-top" class="bg-gradient">
+    <nav>
+    </nav>
+<section class="codingSec lt-grey-bg">
+  <div class="container">
+    <div class="row flex-row blockCont">
+      <h2 class="section-heading">Code Playground Example</h2>
+<div class="tabContainer">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 lftBox item-flex">
+            <div class="navContain">
+              <h4>API</h4>
+                      <!-- Nav tabs -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBlock" aria-expanded="true">
+                    <span class="sr-only col-xs-1">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <div class="navActiveTxt col-xs-10 col-xxs-10">
+                  <span>Test code and response</span>
+                </div>
+              </div>
+              <ul id="navBlock" class="nav flex-column col-md-12 col-sm-12 col-xs-12 show" role="tablist collapse show" role="tablist collapse show" aria-expanded="true" aria-orientation="vertical">
+                <li class="active">
+                  <a href="#vtab1" role="tab" data-toggle="tab" class"codeBlkLnk nav-link active">
+                    <span class="codeAction post">POST</span> Review last REST service.
+                  </a>
+                </li>
+                <li>
+                  <a href="#vtab2" role="tab" data-toggle="tab" class"codeBlkLnk nav-link">
+                    <span class="codeAction get">GET</span> Review last REST service.
+                  </a>
+                </li>
+                <li>
+                  <a href="#vtab3" role="tab" data-toggle="tab" class"codeBlkLnk nav-link">
+                    <span class="codeAction get">GET</span> Rest Request over Apache
+                  </a>
+                </li>
+                <li>
+                  <a href="#vtab4" role="tab" data-toggle="tab" class"codeBlkLnk nav-link">
+                    <span class="codeAction post">POST</span> Rest Request over Apache
+                  </a>
+                </li>
+                <li>
+                  <a href="#vtab5" role="tab" data-toggle="tab" class"codeBlkLnk nav-link">
+                    <span class="codeAction delete">DEL</span> Well Documented
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+                <!-- Tab panes -->
+                <div class="tab-content col-lg-8 col-md-12 col-sm-12 col-xs-12 item-flex">
+                    <div class="tab-pane row flex-row fade show active" id="vtab1">
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleDATA">
+                            <h4>SAMPLE DATA</h4>
+                            <div class="sampleCODE">
+                                <pre class="brush: java; gutter: false;">
+@Path("/json/metallica")
+public class JSONService {
+
+	@POST
+	@Path("/post")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response createTrackInJSON(Track track) {
+
+		String result = "Track saved : " + track;
+		return Response.status(201).entity(result).build();
+
+	}
+	//...
+                                </pre>
+                                <a href="#" class="runCODE ghostBTN">
+                                  Run
+                                </a>
+
+                            </div><!-- sapmple Code -->
+                        </div><!-- SampleDATA -->
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleResults">
+                            <h4>RESPONSE DATA</h4>
+                            <div class="lodingBlock">
+                                <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+                            </div>
+                            <div class="returnCODE">
+                                <pre class="brush: java; gutter: false;">
+Track saved : Track [title=Fade To Black, singer=Metallica]
+                                </pre>
+                            </div><!-- return Code -->
+                        </div><!--sampleResults-->
+                    </div><!-- tab-pane -->
+
+                    <div class="tab-pane row flex-row fade in " id="vtab2">
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleDATA">
+                            <h4>SAMPLE DATA</h4>
+                            <div class="sampleCODE">
+                                <pre class="brush: java; gutter: false;">
+@Path("/json/metallica")
+public class JSONService {
+
+	@GET
+	@Path("/get")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Track getTrackInJSON() {
+
+		Track track = new Track();
+		track.setTitle("Enter Sandman");
+		track.setSinger("Metallica");
+
+		return track;
+
+	}
+	//...
+                                </pre>
+                                <a href="#" class="runCODE ghostBTN">
+                                  Run
+                                </a>
+
+                            </div><!-- sapmple Code -->
+                        </div><!-- SampleDATA -->
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleResults">
+                            <h4>RESPONSE DATA</h4>
+                            <div class="lodingBlock">
+                                <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+                            </div>
+                            <div class="returnCODE">
+                                <pre class="brush: java; gutter: false;">
+{"singer":"Metallica","title":"Enter Sandman"}
+                                </pre>
+                            </div><!-- return Code -->
+                        </div><!--sampleResults-->
+                    </div><!-- tab-pane -->
+
+                    <div class="tab-pane row flex-row fade in" id="vtab3">
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleDATA">
+                            <h4>SAMPLE DATA</h4>
+                            <div class="sampleCODE">
+                                <pre class="brush: java; gutter: false;">
+@Path("/json/product")
+public class JSONService {
+
+	@GET
+	@Path("/get")
+	@Produces("application/json")
+	public Product getProductInJSON() {
+
+		Product product = new Product();
+		product.setName("iPad 3");
+		product.setQty(999);
+
+		return product;
+
+	}
+	//...
+                                </pre>
+                                <a href="#" class="runCODE ghostBTN">
+                                  Run
+                                </a>
+
+                            </div><!-- sapmple Code -->
+                        </div><!-- SampleDATA -->
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleResults">
+                            <h4>RESPONSE DATA</h4>
+                            <div class="lodingBlock">
+                                <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+                            </div>
+                            <div class="returnCODE">
+                                <pre class="brush: java; gutter: false;">
+{"qty":999,"name":"iPad 3"}
+                                </pre>
+                            </div><!-- return Code -->
+                        </div><!--sampleResults-->
+                    </div><!-- tab-pane -->
+
+                    <div class="tab-pane row flex-row fade in" id="vtab4">
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleDATA">
+                            <h4>SAMPLE DATA</h4>
+                            <div class="sampleCODE">
+                                <pre class="brush: java; gutter: false;">
+@Path("/json/product")
+public class JSONService {
+
+        @POST
+	@Path("/post")
+	@Consumes("application/json")
+	public Response createProductInJSON(Product product) {
+
+		String result = "Product created : " + product;
+		return Response.status(201).entity(result).build();
+
+	}
+	//...
+
+                                </pre>
+                                <a href="#" class="runCODE ghostBTN">
+                                  Run
+                                </a>
+
+                            </div><!-- sapmple Code -->
+                        </div><!-- SampleDATA -->
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleResults">
+                            <h4>RESPONSE DATA</h4>
+                            <div class="lodingBlock">
+                                <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+                            </div>
+                            <div class="returnCODE">
+                                <pre class="brush: java; gutter: false;">
+Product created : Product [name=iPad 4, qty=100]
+                                </pre>
+                            </div><!-- return Code -->
+                        </div><!--sampleResults-->
+                    </div><!-- tab-pane -->
+                    <div class="tab-pane row flex-row fade in" id="vtab5">
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleDATA">
+                            <h4>SAMPLE DATA</h4>
+                            <div class="sampleCODE">
+                                <pre class="brush: java; gutter: false;">
+public class ClientDeleteById {
+  public static void main(String[] args) {
+      Client client = ClientBuilder.newClient();
+
+      //delete multiple orders
+      for (Integer orderIdToDelete : Arrays.asList(2, 4)) {
+          WebTarget OrderByIdTarget =
+                  client.target("http://localhost:8080/orders/" + orderIdToDelete);
+          boolean response = OrderByIdTarget.request().delete(Boolean.class);
+          System.out.println(response);
+      }
+  }
+}
+                                </pre>
+                                <a href="#" class="runCODE ghostBTN">
+                                  Run
+                                </a>
+
+                            </div><!-- sapmple Code -->
+                        </div><!-- SampleDATA -->
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-flex sampleResults">
+                            <h4>RESPONSE DATA</h4>
+                            <div class="lodingBlock">
+                                <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+                            </div>
+                            <div class="returnCODE">
+                                <pre class="brush: java; gutter: false;">
+true
+true
+
+Order{id=1, item='item 1', qty=59, orderDate=Fri Jun 16 17:34:12 CDT 2018}
+Order{id=3, item='item 3', qty=10, orderDate=Wed Jun 14 17:34:12 CDT 2018}
+Order{id=5, item='item 5', qty=86, orderDate=Mon Jun 12 17:34:12 CDT 2018}
+                                </pre>
+                            </div><!-- return Code -->
+                        </div><!--sampleResults-->
+                    </div><!-- tab-pane -->
+                                        <div class="tab-pane row flex-row fade in" id="vtab6">
+                        <div class="col-md-12 col-sm-12 col-xs-12 apiCode">
+                        <div class="col-xxxs-12 col-xxs-12 col-xs-4 col-sm-4 col-md-4">
+                            <h4>Sample Data</h4>
+                        </div>
+                    </div><!-- tab-pane -->
+                </div><!--tab-content -->
+              </div><!--tabContainer -->
+
+
+    </div><!-- row -->
+  </div><!--container-->
+</section>
+
+
+  </body>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <!-- <script src="../../js/freelancer.min.js"></script> -->
+  <script src="js/underscore.js" type="text/javascript"></script>
+  <script src="js/showdown/showdown.min.js" type="text/javascript"></script>
+  <script src="js/syntax/shCore.js"></script>
+<script src="js/syntax/shBrushXml.js"></script>
+<script src="js/syntax/shBrushJScript.js"></script>
+<script src="js/syntax/shBrushAS3.js"></script>
+<script src="js/syntax/shBrushCSharp.js"></script>
+<script src="js/syntax/shBrushObjectiveC.js"></script>
+<script src="js/syntax/shBrushJava.js"></script>
+<script src="js/syntax/shBrushJavaFX.js"></script>
+<script src="js/syntax/shBrushPowerShell.js"></script>
+<script src="js/syntax/shBrushPlain.js"></script>
+<script src="js/syntax/shBrushXml.js"></script>
+<script src="js/syntax/shBrushCpp.js"></script>
+<script src="js/syntax/shBrushRuby.js"></script>
+<script src="js/syntax/shBrushPython.js"></script>
+<script src="js/syntax/shBrushVb.js"></script>
+  <script src="codeblock.js" type="text/javascript"></script>
+  </html>
